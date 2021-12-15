@@ -1,0 +1,36 @@
+<div
+  [ngClass]="{
+    bookScale: pageFlipped,
+    book: !pageFlipped
+  }"
+  (click)="flipPage()"
+>
+  <!-- <div class="page1">Content!</div> -->
+  <app-page1></app-page1>
+  <div
+    [ngClass]="{
+      coverBackFlip: pageFlipped,
+      coverBack: !pageFlipped
+    }"
+  >
+    <div class="text">Made with all my love for CSS <3</div>
+  </div>
+  <div
+    [ngClass]="{
+      coverFlip: pageFlipped,
+      cover: !pageFlipped
+    }"
+  >
+    <div class="letters">
+      Rebecka's<br />Book of<br />
+      Wonders<br />
+    </div>
+    <hr />
+  </div>
+  <div
+    [ngClass]="{
+      foldFlip: pageFlipped,
+      fold: !pageFlipped
+    }"
+  ></div>
+</div>

@@ -1,0 +1,94 @@
+.book,
+.bookScale {
+  transform-style: preserve-3d;
+  perspective: 1500px !important;
+  backface-visibility: visible;
+  height: 615px;
+  width: 450px;
+  padding: 15px;
+  transition: height 0.5s ease-in-out, width 0.5s ease-in-out;
+}
+
+.bookScale {
+  height: 715px;
+  width: 550px;
+}
+
+// Everything related to the hardback/fold part of the book
+.fold,
+.foldFlip {
+  background-color: #f6cbdd;
+  height: 100%;
+  width: 30px;
+  position: absolute;
+  top: 0px;
+  left: -40px;
+  transition: transform 0.5s ease-in-out;
+  box-shadow: -10px 9px 19px -5px rgb(0 0 0 / 30%);
+}
+
+.fold::after,
+.foldFlip::after {
+  content: "";
+  height: 100%;
+  width: 10px;
+  background: linear-gradient(
+    90deg,
+    rgba(246, 210, 225, 1) 30%,
+    rgba(245, 196, 216, 1) 100%
+  );
+  position: absolute;
+  top: 0px;
+  left: 30px;
+}
+
+// Everything related to the front and back of the cover (first page)
+.cover,
+.coverFlip,
+.coverBackFlip,
+.coverBack {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  box-shadow: -5px 5px 19px -5px rgb(0 0 0 / 17%);
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+  transform-origin: left center;
+  background-color: #f6cbdd;
+  font-family: "Princess Sofia", cursive;
+  font-size: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.coverFlip {
+  transform: rotateY(-175deg);
+}
+
+.coverBackFlip {
+  transform: rotateY(-174deg);
+}
+
+.letters {
+  color: #d5ad6d;
+  font-weight: 600;
+}
+
+hr {
+  height: 6px;
+  width: 175px;
+  background-color: #f0a8c4;
+  border: none;
+  margin-top: 0px;
+  border-radius: 10px;
+}
+
+.text {
+  transform: rotateY(-180deg);
+  font-family: "Gochi Hand", cursive;
+  font-size: 18px;
+}
